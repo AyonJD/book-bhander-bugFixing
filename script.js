@@ -80,7 +80,6 @@ const switchTab = (id) => {
 
 const showBooks = (books) => {
   const bookContainer = document.getElementById("container");
-
   books.forEach((book) => {
     const div = createCard(book);
     bookContainer.appendChild(div);
@@ -88,6 +87,7 @@ const showBooks = (books) => {
 };
 
 const createCard = (book) => {
+  // console.log(book);
   const div = document.createElement("div");
   div.classList.add("card");
 
@@ -96,7 +96,7 @@ const createCard = (book) => {
   div.innerHTML = `
   <div class="image-container">
     <img
-      src="${book.Image}"
+      src="${book.image}"
       alt=""
     />
     <div class="button-container">
