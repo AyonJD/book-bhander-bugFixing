@@ -67,7 +67,7 @@ const switchTab = (id) => {
     document.getElementById("wishlist").style.display = "grid";
     document.getElementById("container").style.display = "none";
     document.getElementById("cart").style.display = "none";
-
+    document.getElementById("wishlist").innerHTML = '';
     displayWishlist();
   } else {
     document.getElementById("cart").style.display = "grid";
@@ -134,7 +134,7 @@ const addToWishlist = (id) => {
 
 const displayCart = () => {
   const cart = getCartItems();
-  console.log(cart);
+  // console.log(cart);
 
   cart.forEach((book) => {
     const div = createCard(book);
@@ -144,9 +144,8 @@ const displayCart = () => {
 
 const displayWishlist = () => {
   const wishlist = getWishlistItems();
-  console.log(wishlist);
 
-  bookList.forEach((book) => {
+  wishlist.forEach((book) => {
     const div = createCard(book);
     document.getElementById("wishlist").appendChild(div);
   });
