@@ -67,6 +67,7 @@ const switchTab = (id) => {
     document.getElementById("wishlist").style.display = "grid";
     document.getElementById("container").style.display = "none";
     document.getElementById("cart").style.display = "none";
+    //Got an error here and fixed
     document.getElementById("wishlist").innerHTML = '';
     displayWishlist();
   } else {
@@ -89,7 +90,8 @@ const showBooks = (books) => {
 const createCard = (book) => {
   const div = document.createElement("div");
   div.classList.add("card");
-  
+
+  //Got an error here and fixed
   let overview;
   if (book.overview.length > 200) {
     overview = book.overview.slice(0, 100) + '...';
@@ -97,6 +99,7 @@ const createCard = (book) => {
     overview = book.overview;
   }
 
+  //Got an error here and fixed
   div.innerHTML = `
   <div class="image-container">
     <img
@@ -134,7 +137,7 @@ const addToWishlist = (id) => {
 
 const displayCart = () => {
   const cart = getCartItems();
-  // console.log(cart);
+  //Got an error here and fixed
   document.getElementById("cart").innerHTML = '';
 
   cart.forEach((book) => {
@@ -146,6 +149,7 @@ const displayCart = () => {
 const displayWishlist = () => {
   const wishlist = getWishlistItems();
 
+  //Got an error here and fixed
   wishlist.forEach((book) => {
     const div = createCard(book);
     document.getElementById("wishlist").appendChild(div);
